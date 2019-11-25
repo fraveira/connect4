@@ -1,0 +1,194 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(assets/back3.png);
+	display: flex;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+button {
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+	border-radius: 3px;
+	height: 100px;
+	width: 150px;
+	margin-bottom: 100px;
+}
+
+button:hover {
+	background-color: #555555;
+	color: white;
+	opacity: 1;
+}
+
+button:active {
+	height: 90px;
+	width: 140px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 110px;
+	background-color: #999999;
+}
+
+.popup .restart button {
+	margin-left: 150px;
+	opacity: 1;
+}
+
+#panel {
+	position: relative;
+	border: 4px double #0d8add;
+	border-radius: 10px;
+	background: white;
+	background-image: url(assets/back.png);
+}
+
+.colpus {
+	position: relative;
+	width: 90%;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.difficult {
+	position: relative;
+	width: 90%;
+	display: block;
+}
+
+.restart {
+	position: bottom;
+	width: 90%;
+	display: block;
+}
+
+#board {
+	display: flex;
+	border: 4px double #0d8add;
+	border-radius: 10px;
+	background-color: white;
+	background-image: url(assets/back.png);
+}
+
+.slot {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.hole {
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+	position: relative;
+	left: -30px;
+	top: -30px;
+	border: 40px #08a solid;
+}
+
+.hole:hover {
+	box-shadow: inset 0 6px 8px 0 rgba(0, 0, 0, 0.2), inset 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.player1 {
+	background-color: red;
+}
+
+.player2 {
+	background-color: black;
+}
+
+#title {
+	position: relative;
+	border: 4px double #0d8add;
+	text-align: center;
+	border-radius: 10px;
+	background: white;
+	background-image: url("assets/back.png");
+}
+
+h1 {
+	font-family: "Montserrat", sans-serif;
+	color: #0d8add;
+	font-size: 45px;
+}
+
+.four {
+	margin-top: 150px;
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.five {
+	visibility: hidden;
+	margin-right: 25px;
+	margin-left: 25px;
+	color: red;
+}
+
+/* POPUP */
+
+.popup {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	background-color: white;
+	font-size: 15px;
+	text-align: center;
+	z-index: 1;
+	display: block;
+	border: 1px solid #ccc;
+	opacity: 0.95;
+	display: none;
+}
+
+.popup h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 60px;
+	margin-left: 25px;
+	margin-top: 175px;
+}
+
+.popup p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 25px;
+}
+
+/* Current player show*/
+
+.turn {
+	margin-top: 50px;
+	margin-right: 25px;
+	margin-left: 25px;
+	display: inline-block;
+}
+
+#player1 {
+	margin: 20px;
+	font-size: 30px;
+	color: red;
+	font-weight: bold;
+}
+
+#player2 {
+	margin: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+img {
+	max-width: 10%;
+	transform: rotate(180deg);
+	transition: transform;
+	transition-duration: 0.75s;
+}
+
+.rotate {
+	transform: rotate(0deg);
+	transition-property: transform;
+	transition-duration: 0.75s;
+}
