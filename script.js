@@ -1,14 +1,14 @@
 (function() {
-	var currentPlayer = 'player1';
-	var column = $('.column');
-	var row = $('.column').children();
-	var difficulty = 4;
+	let currentPlayer = 'player1';
+	let column = $('.column');
+	let row = $('.column').children();
+	let difficulty = 4;
 
 	$(document).on('click', '.column', function(e) {
-		var col = $(e.currentTarget);
-		var slotsInCol = col.find('.slot');
-		var foundAnEmptySlot = false;
-		for (var i = 5; i >= 0; i--) {
+		let col = $(e.currentTarget);
+		let slotsInCol = col.find('.slot');
+		let foundAnEmptySlot = false;
+		for (i = 5; i >= 0; i--) {
 			if (!slotsInCol.eq(i).hasClass('player1') && !slotsInCol.eq(i).hasClass('player2')) {
 				foundAnEmptySlot = true;
 				break;
@@ -26,6 +26,7 @@
 			victory();
 		}
 		if (checkForDiagonal(column, row)) {
+			console.log('Diagonal win');
 			victory();
 		}
 
