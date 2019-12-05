@@ -3,7 +3,6 @@
 }
 
 body {
-	background-image: url(assets/back3.png);
 	display: flex;
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -46,7 +45,7 @@ button:active {
 	background-image: url(assets/back.png);
 }
 
-.colpus {
+.colplus {
 	position: relative;
 	width: 90%;
 	display: block;
@@ -191,4 +190,62 @@ img {
 	transform: rotate(0deg);
 	transition-property: transform;
 	transition-duration: 0.75s;
+}
+
+/* // Media query, 1090px, decrease the size of the holes. */
+
+@media screen and (min-width: 601px) and (max-width: 1110px) {
+	.hole {
+		width: 160px;
+		height: 160px;
+		border-radius: 80px;
+		position: relative;
+		left: -30px;
+		top: -30px;
+		border: 40px #08a solid;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#board {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#panel {
+		display: flex;
+		border: 4px double #0d8add;
+		border-radius: 10px;
+	}
+
+	button {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	button:active {
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
+		background-color: #999999;
+		margin-bottom: 0px;
+	}
+
+	.colplus {
+		visibility: hidden;
+		height: 0px;
+		width: 0px;
+	}
+
+	.difficult button {
+		float: left;
+		margin-left: 200px;
+	}
+
+	.restart button {
+		float: right;
+		margin-right: 200px;
+	}
 }
