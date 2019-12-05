@@ -50,7 +50,7 @@
 	function checkForDiagonal(col, row) {
 		for (col = 0; col < column.length; col++) {
 			for (row = 0; row < column.eq(0).children().length; row++) {
-				if (difficulty == 4) {
+				if (difficulty == 4 && row - 3 > -1) {
 					if (
 						// Checking top right.+- // Or bottom left.
 						column.eq(col).children().eq(row).hasClass(currentPlayer) &&
@@ -58,7 +58,6 @@
 						column.eq(col + 2).children().eq(row - 2).hasClass(currentPlayer) &&
 						column.eq(col + 3).children().eq(row - 3).hasClass(currentPlayer)
 					) {
-						console.log('Difficulty is ' + difficulty);
 						return true;
 					}
 					if (
@@ -68,10 +67,9 @@
 						column.eq(col - 2).children().eq(row - 2).hasClass(currentPlayer) &&
 						column.eq(col - 3).children().eq(row - 3).hasClass(currentPlayer)
 					) {
-						console.log('Difficulty is ' + difficulty);
 						return true;
 					}
-				} else if (difficulty == 5) {
+				} else if (difficulty == 5 && row - 4 > -1) {
 					if (
 						// Checking top right.+- // Or bottom left.
 						column.eq(col).children().eq(row).hasClass(currentPlayer) &&
